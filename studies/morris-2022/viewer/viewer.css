@@ -4,3 +4,5 @@
 @media(max-width:414px){.stage-filter{display:grid;grid-template-columns:minmax(0,1fr)}.stage-filter select{width:100%}}
 
 .stage-comparison[hidden]{display:none}.comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:14px 0}.comparison-panel{min-width:0;border:1px solid #d4ded8;padding:12px;border-radius:5px}.comparison-panel h4{margin:0;font-size:16px}.comparison-panel .hint:empty{display:none}.comparison-plot{height:370px}@media(max-width:850px){.comparison-grid{grid-template-columns:minmax(0,1fr)}}
+
+.clusters button{text-align:left;white-space:normal;max-width:100%;line-height:1.5}.toolbar{padding-top:0}footer{font-size:13px}
