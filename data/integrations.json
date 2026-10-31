@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-31",
+  "integrations": [],
+  "required_fields": [
+    "id",
+    "title",
+    "status",
+    "study_ids",
+    "species",
+    "conditions",
+    "n_cells",
+    "n_genes",
+    "methods",
+    "batch_correction",
+    "donor_metadata",
+    "version",
+    "snapshot_date",
+    "page"
+  ]
+}

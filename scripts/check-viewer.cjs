@@ -1,0 +1,11 @@
+// A non-browser contract test: deep-link selection and plotting inputs, not UI rendering.
+const fs=require('node:fs'),vm=require('node:vm'),path=require('node:path'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..'),viewer=path.join(root,'studies/morris-2022/viewer'),atlas=JSON.parse(fs.readFileSync(path.join(viewer,'manifest.json')));
+class Element{constructor(tag='div'){this.tagName=tag;this.children=[];this.dataset={};this.value='';this.textContent='';this.classList={toggle(){}}}setAttribute(k,v){this[k]=v;if(k.startsWith('data-'))this.dataset[k.slice(5)]=v}append(...xs){this.children.push(...xs)}replaceChildren(...xs){this.children=xs}addEventListener(k,fn){this["on"+k]=fn}scrollIntoView(){}querySelectorAll(){return[]}on(){}remove(){}click(){}}
+const checks=[];
+for(const id of [null,...atlas.runs.map(r=>r.id),'invalid']){
+ const els={};const document={documentElement:{},head:new Element(),createElement:t=>new Element(t),querySelector:s=>els[s]??=new Element(),querySelectorAll:()=>[],getElementById:()=>new Element()};const plots=[];const Plotly={newPlot:(e,traces,layout)=>{plots.push({traces,layout});return Promise.resolve()},Plots:{resize(){}},purge(){}};
+ const context={window:{OVARY:atlas},document,location:{search:(id?'?run='+id+'&':'?')+'lang=en'},localStorage:{getItem(){return null},setItem(){}},URLSearchParams,Plotly,matchMedia:()=>({matches:true}),setTimeout,clearTimeout};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(viewer,'viewer.js'),'utf8'),context);
+ const expected=atlas.runs.some(r=>r.id===id)?id:atlas.qc_run;assert.equal(els['#history'].value,expected);assert.equal(document.documentElement.lang,'en');assert(plots.some(p=>p.layout.uirevision===expected));const p=plots.find(p=>p.layout.uirevision===expected);const r=atlas.runs.find(r=>r.id===expected);assert.equal(p.traces.reduce((n,t)=>n+t.x.length,0),r.n);els['#reset'].onclick();assert.equal(els['#history'].value,expected);checks.push({requested:id,selected:expected,n_cells:r.n});
+}
+fs.writeFileSync(path.join(root,'docs/VIEWER_CONTRACT_CHECKS.json'),JSON.stringify({test_type:'non-browser VM contract',cases:checks},null,2));console.log(JSON.stringify({passed:checks.length,type:'non-browser VM contract'}));

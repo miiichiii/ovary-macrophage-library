@@ -1,0 +1,431 @@
+{
+  "schema_version": 1,
+  "updated": "2026-10-31",
+  "studies": [
+    {
+      "id": "morris-2022",
+      "short_name": "Morris et al. · 2022",
+      "title": "A single-cell atlas of the cycling murine ovary",
+      "journal": "eLife 2022;11:e77239",
+      "doi": "https://doi.org/10.7554/eLife.77239",
+      "source": "https://osf.io/924fz/",
+      "species": "Mus musculus",
+      "conditions": {
+        "ja": "性周期に沿ったマウス卵巣。周期・個体情報と対応根拠は保存済み解析のメタデータで確認。",
+        "en": "Cycling murine ovary. Review stage, donor and mapping evidence in the saved analysis metadata."
+      },
+      "n_cells": 1377,
+      "whole_ovary_n_cells": 54748,
+      "n_genes": 25289,
+      "status": "available",
+      "annotation": {
+        "ja": "マクロファージ候補。確定した細胞種注釈ではありません。",
+        "en": "Macrophage candidates, not a definitive cell-type annotation."
+      },
+      "methods": {
+        "ja": "保存済みUMAP・クラスターを保持。部分集団の再解析は各結果の設定を参照。発現は全遺伝子のraw countsを用いたlog正規化。",
+        "en": "Saved UMAPs and clusters are preserved. Subset reanalysis settings are recorded per run. Expression uses log-normalized raw counts across the full gene set."
+      },
+      "snapshot_date": "2026-10-31",
+      "version": "2026-10-31.2",
+      "default_run": "1d52ecbbd1423296b5",
+      "whole_run": "395b054678cad32d3e",
+      "source_sha256": "732a20f9f77b01bcc4578eaef7433c4fcd58fa10da311831505ed9c82521ac4d",
+      "page": "studies/morris-2022/",
+      "analyses": [
+        {
+          "id": "03594bab313b88349e506fd7",
+          "name": {
+            "ja": "クラスター 1",
+            "en": "Cluster 1"
+          },
+          "n_cells": 1568,
+          "n_clusters": 3,
+          "parent": "395b054678cad32d3e",
+          "source_cluster": "1",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=03594bab313b88349e506fd7"
+        },
+        {
+          "id": "0cba12f3a28f35467dfa0560",
+          "name": {
+            "ja": "クラスター Q20C6",
+            "en": "Cluster Q20C6"
+          },
+          "n_cells": 34,
+          "n_clusters": 2,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C6",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=0cba12f3a28f35467dfa0560"
+        },
+        {
+          "id": "1d52ecbbd1423296b5",
+          "name": {
+            "ja": "マクロファージ候補 · QC1377",
+            "en": "Macrophage candidates · QC1377"
+          },
+          "n_cells": 1377,
+          "n_clusters": 7,
+          "parent": null,
+          "source_cluster": null,
+          "kind": "imported_existing_analysis",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence",
+            "stage"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=1d52ecbbd1423296b5"
+        },
+        {
+          "id": "223f1d140a15330ab6987bd6",
+          "name": {
+            "ja": "クラスター Q20C4",
+            "en": "Cluster Q20C4"
+          },
+          "n_cells": 116,
+          "n_clusters": 2,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C4",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=223f1d140a15330ab6987bd6"
+        },
+        {
+          "id": "2361f5621d2edc2e6b91ca7e",
+          "name": {
+            "ja": "クラスター 7",
+            "en": "Cluster 7"
+          },
+          "n_cells": 3503,
+          "n_clusters": 7,
+          "parent": "395b054678cad32d3e",
+          "source_cluster": "7",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=2361f5621d2edc2e6b91ca7e"
+        },
+        {
+          "id": "36e2df9f2d96718d3e4eec43",
+          "name": {
+            "ja": "クラスター SC0",
+            "en": "Cluster SC0"
+          },
+          "n_cells": 184,
+          "n_clusters": 3,
+          "parent": "4f85e2ba7babd92127",
+          "source_cluster": "SC0",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=36e2df9f2d96718d3e4eec43"
+        },
+        {
+          "id": "395b054678cad32d3e",
+          "name": {
+            "ja": "卵巣全体（参照）",
+            "en": "Whole ovary (context)"
+          },
+          "n_cells": 54748,
+          "n_clusters": 27,
+          "parent": null,
+          "source_cluster": null,
+          "kind": "imported_existing_analysis",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "stage"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=395b054678cad32d3e"
+        },
+        {
+          "id": "4f85e2ba7babd92127",
+          "name": {
+            "ja": "旧マクロファージ候補 · 1,820細胞",
+            "en": "Legacy candidate subset · 1,820 cells"
+          },
+          "n_cells": 1820,
+          "n_clusters": 9,
+          "parent": "395b054678cad32d3e",
+          "source_cluster": "18",
+          "kind": "imported_existing_analysis",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "stage"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=4f85e2ba7babd92127"
+        },
+        {
+          "id": "55528ce54cd769a955a2d978",
+          "name": {
+            "ja": "クラスター Q20C0",
+            "en": "Cluster Q20C0"
+          },
+          "n_cells": 309,
+          "n_clusters": 4,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C0",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=55528ce54cd769a955a2d978"
+        },
+        {
+          "id": "68c64d08bad4e949e9733060",
+          "name": {
+            "ja": "クラスター Q20C3",
+            "en": "Cluster Q20C3"
+          },
+          "n_cells": 191,
+          "n_clusters": 3,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C3",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=68c64d08bad4e949e9733060"
+        },
+        {
+          "id": "801d6b207c4f639ea5fa7a1c",
+          "name": {
+            "ja": "クラスター Q20C2",
+            "en": "Cluster Q20C2"
+          },
+          "n_cells": 200,
+          "n_clusters": 2,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C2",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=801d6b207c4f639ea5fa7a1c"
+        },
+        {
+          "id": "b9354b39ee4883f4942871f4",
+          "name": {
+            "ja": "クラスター Q20C5",
+            "en": "Cluster Q20C5"
+          },
+          "n_cells": 102,
+          "n_clusters": 2,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C5",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=b9354b39ee4883f4942871f4"
+        },
+        {
+          "id": "ce9711fe40a091b85ba33a30",
+          "name": {
+            "ja": "クラスター Q20C1",
+            "en": "Cluster Q20C1"
+          },
+          "n_cells": 425,
+          "n_clusters": 2,
+          "parent": "1d52ecbbd1423296b5",
+          "source_cluster": "Q20C1",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [
+            "analysis_stage",
+            "analysis_mouse",
+            "stage_evidence"
+          ],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=ce9711fe40a091b85ba33a30"
+        },
+        {
+          "id": "df4839375f37ebe6c61a3c35",
+          "name": {
+            "ja": "クラスター 13",
+            "en": "Cluster 13"
+          },
+          "n_cells": 127,
+          "n_clusters": 2,
+          "parent": "395b054678cad32d3e",
+          "source_cluster": "13",
+          "kind": "subset_recomputed",
+          "recipe": {
+            "n_top_genes": 2000,
+            "n_pcs": 30,
+            "n_neighbors": 15,
+            "resolution": 0.5,
+            "seed": 0,
+            "target_sum": 10000.0,
+            "min_cells": 3
+          },
+          "metadata_fields": [],
+          "status": "available",
+          "path": "studies/morris-2022/viewer/?run=df4839375f37ebe6c61a3c35"
+        }
+      ],
+      "page_title": {
+        "ja": "Morris 2022 · 卵巣マクロファージ候補",
+        "en": "Morris 2022 · Ovary macrophage candidates"
+      },
+      "included_scope": {
+        "ja": "収録範囲：保存済みUMAPと遺伝子発現。過去の915細胞解析・差次的発現・GSEAレポートは、この版には含みません。 性周期別の絞り込みと発現表示、原著直接一致のみの表示に対応。",
+        "en": "Included: saved UMAPs and gene expression. Historical 915-cell analyses, differential expression and GSEA reports are not included in this version. Stage filtering, filtered expression and direct-author-only evidence selection are supported."
+      },
+      "interpretation": {
+        "ja": "この1,377細胞はローカル解析で抽出・QCしたマクロファージ候補です。全細胞が確定マクロファージであることや、原著の細胞種注釈と完全に一致することを意味しません。旧1,820細胞の結果とは別の解析履歴です。",
+        "en": "These 1,377 cells are a locally selected, QC-filtered macrophage-candidate population. This does not establish that every cell is a macrophage or that the subset exactly matches the original authors’ annotation. It is separate from the legacy 1,820-cell analysis."
+      },
+      "viewer_features": {
+        "stage_filter": true,
+        "author_vs_inferred_labels": true,
+        "direct_evidence_only": true,
+        "filtered_expression_csv": true,
+        "simultaneous_stage_comparison": false
+      }
+    }
+  ]
+}
